@@ -7,7 +7,9 @@
   "license": "MIT",
   "scripts": {
     "build": "npx tsc",
-    "start": "yarn build && node dist/src/index.js"
+    "start": "yarn build && node dist/src/index.js",
+    "token-recover": "yarn build && node dist/token-recover/index.js",
+    "token-analyze": "yarn build && node dist/token-recover/analyze-index.js"
   },
   "devDependencies": {
     "@types/node": "^22.15.30",
@@ -15,6 +17,7 @@
   },
   "dependencies": {
     "command-line-args": "^5.2.0",
+    "dotenv": "^17.2.3",
     "ethers": "^5.8.0",
     "log-timestamp": "^0.3.0"
   }

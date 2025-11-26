@@ -26,8 +26,18 @@ yarn install
 To initialize the bot run:
 
 ```bash
-yarn start 
-  -p <privatekey> \ # private key from compromised wallet
-  -r \ https://eth-mainnet.alchemyapi.io/v2/<key>
-  -s <pubkey> # OPTIONAL address to receive eth, defaults to my testing wallet 0x1F3bfa0620f95fda15E67F3e8FA459A258559E94
+yarn start \
+  -k <private-key> \ # private key from compromised wallet
+  -r https://eth-mainnet.alchemyapi.io/v2/<key> \ 
+  -s <sweeper-address> # OPTIONAL address to receive the ETH, defaults to my testing wallet 0x1F3bfa0620f95fda15E67F3e8FA459A258559E94
 ```
+
+To recover ERC20 tokens from a compromised wallet, run:
+
+```bash
+yarn token-recover \
+  -k <private-key> \
+  -r https://eth-mainnet.alchemyapi.io/v2/<key> \
+  -a <recipient-address> \
+  -w <sponsor-private-key> 
+  ```
