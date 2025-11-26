@@ -2,4 +2,4 @@ dist
 node_modules
 *.log
 .yarn
-.yarn.lock
+yarn.lock
